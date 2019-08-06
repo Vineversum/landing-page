@@ -1,0 +1,12 @@
+.about {
+    background-color: $color-light;
+    &__items {
+        margin-bottom: 45px;
+    }
+    &__item {
+        margin-bottom: 30px;
+    }
+    &__description {
+        text-align: start;
+    }
+}

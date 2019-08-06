@@ -1,0 +1,7 @@
+.slider {
+    min-height: 100vh;
+    &__item {
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+}

@@ -1,0 +1,25 @@
+.blog {
+    background-color: $color-dark;
+    &-item {
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        &__image {
+            padding: 0;
+            img {
+                width: 100%;
+            }
+        }
+        &__description {
+            font-size: 0.9rem;
+        }
+        &__post {
+            background-color: $color-light;
+            padding: 15px;
+        }
+        &__date {
+            margin: 15px 0;
+        }
+    }
+}

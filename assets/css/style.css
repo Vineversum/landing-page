@@ -1,0 +1,169 @@
+.btn-danger {
+  background-color: white;
+  color: #ee3b24; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif; }
+
+html {
+  font-size: 16px; }
+
+h1, h2, h3, h4, h5 {
+  font-family: "Roboto Slab", serif; }
+
+p {
+  color: #54595f; }
+
+.about, .features, .gallery, .blog, .contacts, .advantages {
+  min-height: 100vh;
+  padding: 100px 0 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .about__title, .features__title, .gallery__title, .blog__title, .contacts__title, .advantages__title {
+    text-align: center;
+    margin-bottom: 45px; }
+  .about__description, .features__description, .gallery__description, .blog__description, .contacts__description, .advantages__description {
+    text-align: center;
+    margin-bottom: 45px; }
+
+.slider {
+  min-height: 100vh; }
+  .slider__item {
+    background-position: 50% 50%;
+    background-size: cover; }
+
+.about {
+  background-color: white; }
+  .about__items {
+    margin-bottom: 45px; }
+  .about__item {
+    margin-bottom: 30px; }
+  .about__description {
+    text-align: start; }
+
+.features {
+  background-color: #ececec; }
+  .features-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .features-item__icon {
+      margin-bottom: 40px; }
+      .features-item__icon > i {
+        position: relative;
+        font-size: 80px;
+        color: rgba(233, 20, 20, 0.925);
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg); }
+        .features-item__icon > i > i {
+          font-size: 30px;
+          color: white;
+          z-index: 1;
+          position: absolute;
+          top: calc(50% - 15px);
+          bottom: calc(50% - 15px);
+          right: calc(50% - 15px);
+          left: calc(50% - 15px);
+          -webkit-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+          text-align: center; }
+          .features-item__icon > i > i.fa-code {
+            right: calc(50% - 18px);
+            left: calc(50% - 18px); }
+    .features-item__title {
+      text-align: center; }
+    .features-item__description {
+      text-align: center; }
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .gallery .container-fluid {
+    padding: 0 30px; }
+  .gallery-item {
+    padding: 0 5px 0px 5px; }
+    .gallery-item__image {
+      width: 100%; }
+
+.blog {
+  background-color: #ececec; }
+  .blog-item a {
+    text-decoration: none;
+    color: inherit; }
+  .blog-item__image {
+    padding: 0; }
+    .blog-item__image img {
+      width: 100%; }
+  .blog-item__description {
+    font-size: 0.9rem; }
+  .blog-item__post {
+    background-color: white;
+    padding: 15px; }
+  .blog-item__date {
+    margin: 15px 0; }
+
+.advantages {
+  background-color: #d8d8d8;
+  padding: 0; }
+  .advantages-item__icon {
+    padding: 0 15px;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0; }
+    .advantages-item__icon i {
+      color: red;
+      font-size: 2.75rem;
+      width: 60px;
+      margin-top: 10px;
+      text-align: center; }
+  .advantages__image {
+    background-position: center center;
+    background-size: cover; }
+  .advantages__content {
+    height: 100vh;
+    padding: 100px 30px 90px 30px; }
+
+@media (max-width: 991.8px) and (min-width: 768px) {
+  .advantages .container-fluid {
+    max-width: 720px; } }
+
+.footer {
+  font-size: 0.9rem; }
+  .footer h3 {
+    color: #ececec; }
+    .footer h3::first-letter {
+      color: red; }
+  .footer p {
+    color: #d8d8d8; }
+  .footer a {
+    color: #d8d8d8; }
+  .footer ul {
+    padding-left: 30px;
+    list-style: none; }
+  .footer__top {
+    background-color: #282828;
+    padding: 40px 0; }
+  .footer__bottom {
+    padding: 30px 0;
+    text-align: center;
+    background-color: #343434; }

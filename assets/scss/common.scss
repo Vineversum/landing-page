@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+html {
+    font-size: 16px;
+}
+h1, h2, h3, h4, h5 {
+    font-family: "Roboto Slab", serif;
+}
+p {
+    color: rgb(84, 89, 95);
+}
+.about, .features, .gallery, .blog, .contacts, .advantages {
+    min-height: 100vh;
+    padding: 100px 0 90px;
+    display: flex;
+    align-items: center;
+    &__title {
+        text-align: center;
+        margin-bottom: 45px;
+    }
+    &__description {
+        text-align: center;
+        margin-bottom: 45px;
+    }
+}
+
