@@ -7,6 +7,10 @@ html {
 }
 h1, h2, h3, h4, h5 {
     font-family: "Roboto Slab", serif;
+    transition: transform 1s;
+    &.hidden {
+        transform: translateY(70px);
+    }
 }
 p {
     color: rgb(84, 89, 95);
@@ -23,6 +27,10 @@ p {
     &__description {
         text-align: center;
         margin-bottom: 45px;
+        transition: transform 1s;
+        &.hidden {
+            transform: translateY(70px);
+        }
     }
 }
 

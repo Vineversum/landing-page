@@ -1,4 +1,39 @@
 .btn-danger {
     background-color: $color-light;
-    color: #ee3b24;
+    color: $color-accent;
+}
+.navbar-dark .navbar-nav .nav-link {
+    text-align: center;
+    text-decoration: none;
+    color: $color-light;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 7px;
+        right: 7px;
+        bottom: 0;
+        height: 3px;
+        background-color: transparent;
+        border-radius: 3px;
+    }
+    &:hover {
+        color: $color-light;
+        &::after {
+            transform: translateY(-5px);
+            transition: transform 0.5s;
+            background-color: $color-light;
+        }
+    }
+    &.active {
+        color: #ee3b24;
+        &::after {
+            background-color: #ee3b24;
+            transform: translateY(-5px);
+        }
+    }
+}
+
+.header .bg-dark {
+    background-color: rgba(0, 0, 0, 0.8) !important;
 }

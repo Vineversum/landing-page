@@ -3,7 +3,7 @@
     h3 {
         color: $color-dark;
         &::first-letter {
-            color: red;
+            color: $color-accent;
         }
     }
     p {
@@ -14,6 +14,10 @@
     }
     a {
         color: $color-darkest;
+        text-decoration: none;
+        &:hover {
+            color: $color-light;
+        }
     }
     ul {
         padding-left: 30px;

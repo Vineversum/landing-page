@@ -1,12 +1,14 @@
 .blog {
     background-color: $color-dark;
     &-item {
+        overflow: hidden;
         a {
             text-decoration: none;
             color: inherit;
         }
         &__image {
             padding: 0;
+            transition: transform 0.5s;
             img {
                 width: 100%;
             }
@@ -17,9 +19,19 @@
         &__post {
             background-color: $color-light;
             padding: 15px;
+            transition: background-color 0.5s;
         }
         &__date {
             margin: 15px 0;
+        }
+        &:hover {
+            .blog-item__image {
+                transform: scale(1.5);
+            }
+            .blog-item__post {
+                background-color: $color-accent;
+                color: $color-light;
+            }
         }
     }
 }
