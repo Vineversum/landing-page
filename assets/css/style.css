@@ -49,6 +49,9 @@
 html {
   font-size: 16px; }
 
+body {
+  overflow-x: hidden; }
+
 h1, h2, h3, h4, h5 {
   font-family: "Roboto Slab", serif; }
 
@@ -57,7 +60,7 @@ p {
 
 .about, .features, .gallery, .blog, .contacts, .advantages {
   min-height: 100vh;
-  padding: 100px 0 90px;
+  padding: 105px 0 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,6 +104,15 @@ p {
       -ms-transform: translateY(100px);
       transform: translateY(100px);
       opacity: 0; }
+  @media (max-width: 992px) and (min-width: 768px) {
+    .about, .features, .gallery, .blog, .contacts, .advantages {
+      padding: 105px 0 75px; } }
+  @media (max-width: 768px) and (min-width: 576px) {
+    .about, .features, .gallery, .blog, .contacts, .advantages {
+      padding: 90px 0 60px; } }
+  @media (max-width: 576px) {
+    .about, .features, .gallery, .blog, .contacts, .advantages {
+      padding: 90px 0 45px; } }
 
 .slider {
   min-height: 100vh; }
@@ -226,7 +238,9 @@ p {
       transition: transform 0.5s, -webkit-transform 0.5s; }
     .gallery-item__wrapper {
       position: relative;
-      overflow: hidden; }
+      overflow: hidden;
+      max-height: 33.33vh;
+      min-height: 200px; }
     .gallery-item__caption {
       position: absolute;
       top: 0;
@@ -443,6 +457,8 @@ p {
 
 .blog {
   background-color: #ececec; }
+  .blog > .container {
+    padding: 0 30px; }
   .blog-item a {
     text-decoration: none;
     color: inherit; }
@@ -591,7 +607,25 @@ p {
     background-size: cover; }
   .advantages__content {
     height: 100vh;
-    padding: 100px 30px 90px 30px; }
+    padding: 105px 30px 90px 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    @media (max-width: 992px) and (min-width: 768px) {
+      .advantages__content {
+        padding-top: 105px;
+        padding-bottom: 75px; } }
+    @media (max-width: 768px) and (min-width: 576px) {
+      .advantages__content {
+        padding-top: 90px;
+        padding-bottom: 60px; } }
+    @media (max-width: 576px) {
+      .advantages__content {
+        padding-top: 90px;
+        padding-bottom: 45px; } }
   .advantages__description {
     margin-bottom: 45px; }
 
@@ -630,6 +664,8 @@ p {
       color: #e91414; }
   .footer p {
     color: #d8d8d8; }
+  .footer li {
+    position: relative; }
   .footer a {
     color: #d8d8d8;
     text-decoration: none; }
@@ -641,6 +677,11 @@ p {
   .footer__top {
     background-color: #282828;
     padding: 40px 0; }
+    .footer__top ul > li > i {
+      color: #d8d8d8;
+      position: absolute;
+      left: -28px;
+      top: 3px; }
   .footer__bottom {
     padding: 30px 0;
     text-align: center;

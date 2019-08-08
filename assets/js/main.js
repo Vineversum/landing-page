@@ -31,7 +31,7 @@ function scrolling() {  //проверяем какие элементы поп�
            if (isVisible(domElem[0], 0.75)) {
                 setTimeout(function() {
                     $elem.removeClass('hidden');
-                }, 300);
+                }, 0);
             }
            else $(this).addClass('hidden');
        });
@@ -55,6 +55,10 @@ function inWhichSection(){ //функция проверяет в какой с�
                                  'padding' : '5px 16px'});
 
     for (let i = 0; i < sectionsDomObj.length; i++) {
+        if (window.pageYOffset < 150) {
+            $navLinks.removeClass('active'); 
+            return;
+        }
         if (i === sectionsDomObj.length - 1) { // мы в последней секции? 
             $navLinks.removeClass('active').eq(i).addClass('active');
             return;

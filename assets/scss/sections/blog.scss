@@ -1,5 +1,8 @@
 .blog {
     background-color: $color-dark;
+    > .container {
+        padding: 0 30px;
+    }
     &-item {
         
         a {

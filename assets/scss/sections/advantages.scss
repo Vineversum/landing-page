@@ -9,7 +9,6 @@
         &__icon {
             padding: 0 15px;
             flex-grow: 0;
-            // text-align: center;
             i {
                 color: $color-accent;
                 font-size: 2.75rem;
@@ -32,7 +31,21 @@
     }
     &__content {
         height: 100vh;
-        padding: 100px 30px 90px 30px;
+        padding: 105px 30px 90px 30px;
+        display: flex;
+        align-items: center;
+        @media (max-width: $middle) and (min-width: $small) {
+            padding-top: 105px;
+            padding-bottom: 75px;
+        }
+        @media (max-width: $small) and (min-width: $xsmall) {
+            padding-top: 90px;
+            padding-bottom: 60px;
+        }
+        @media (max-width: $xsmall) {
+            padding-top: 90px;
+            padding-bottom: 45px;
+        }
     }
     &__description {
         margin-bottom: 45px;

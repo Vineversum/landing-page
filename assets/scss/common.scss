@@ -5,6 +5,9 @@
 html {
     font-size: 16px;
 }
+body {
+    overflow-x: hidden;
+}
 h1, h2, h3, h4, h5 {
     font-family: "Roboto Slab", serif;
 }
@@ -13,7 +16,7 @@ p {
 }
 .about, .features, .gallery, .blog, .contacts, .advantages {
     min-height: 100vh;
-    padding: 100px 0 90px;
+    padding: 105px 0 90px;
     display: flex;
     align-items: center;
     &__title {
@@ -36,6 +39,15 @@ p {
             transform: translateY(100px);
             opacity: 0;
         }
+    }
+    @media (max-width: $middle) and (min-width: $small) {
+        padding: 105px 0 75px;
+    }
+    @media (max-width: $small) and (min-width: $xsmall) {
+        padding: 90px 0 60px;
+    }
+    @media (max-width: $xsmall) {
+        padding: 90px 0 45px;
     }
 }
 

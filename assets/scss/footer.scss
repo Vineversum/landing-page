@@ -10,7 +10,7 @@
         color: $color-darkest;
     }
     li {
-
+        position: relative;
     }
     a {
         color: $color-darkest;
@@ -26,7 +26,13 @@
     &__top {
         background-color: rgb(40, 40, 40);
         padding: 40px 0;
-        
+        ul > li > i {
+            color: $color-darkest;
+            // margin-left: -30px;
+            position: absolute;
+            left: -28px;
+            top: 3px;
+        }
     }
 
     &__bottom {
