@@ -1,15 +1,19 @@
 .blog {
     background-color: $color-dark;
     &-item {
-        overflow: hidden;
+        
         a {
             text-decoration: none;
             color: inherit;
         }
         &__image {
+            overflow: hidden;
             padding: 0;
-            transition: transform 0.5s;
+            transition: transform, opacity;
+            transition-duration: 0.8s;
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
             img {
+                transition: transform 0.5s;
                 width: 100%;
             }
         }
@@ -19,18 +23,78 @@
         &__post {
             background-color: $color-light;
             padding: 15px;
-            transition: background-color 0.5s;
+            transition: transform, opacity;
+            transition-duration: 0.8s;
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
         }
         &__date {
             margin: 15px 0;
         }
         &:hover {
-            .blog-item__image {
+            .blog-item__image img {
                 transform: scale(1.5);
             }
             .blog-item__post {
                 background-color: $color-accent;
                 color: $color-light;
+                transition: background-color 1s ease;
+            }
+        }
+        
+
+        &:nth-of-type(1) {
+            &.hidden {
+                .blog-item__image {
+                    transform: translateX(-200px);
+                    opacity: 0;
+                    
+                }
+                .blog-item__post {
+                    transition-delay:  0.2s;
+                    transform: translate(-200px, 200px);
+                    opacity: 0;
+                }
+            }
+        }
+        &:nth-of-type(2) {
+            &.hidden {
+                .blog-item__image {
+                    transition-delay:  0.5s;
+                    transform: translate(200px, 200px);
+                    opacity: 0;
+                }
+                .blog-item__post {
+                    transition-delay: 0.8s;
+                    transform: translateX(200px);
+                    opacity: 0;
+                }
+            }
+        }
+        &:nth-of-type(3) {
+            &.hidden {
+                .blog-item__image {
+                    transform: translate(-200px, 200px);
+                    opacity: 0;
+                }
+                .blog-item__post {
+                    transition-delay: 0.2s;
+                    transform: translateX(-200px);
+                    opacity: 0;
+                }
+            }
+        }
+        &:nth-of-type(4) {
+            &.hidden {
+                .blog-item__image {
+                    transition-delay: 0.5s;
+                    transform: translateX(200px);
+                    opacity: 0;
+                }
+                .blog-item__post {
+                    transition-delay: 0.8s;
+                    transform: translateY(200px);
+                    opacity: 0;
+                }
             }
         }
     }

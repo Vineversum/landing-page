@@ -1,0 +1,12 @@
+.contacts form .form-group,
+.contacts form .form-row {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s; }
+  .contacts form .form-group.hidden,
+  .contacts form .form-row.hidden {
+    -webkit-transform: translateY(70px);
+    -ms-transform: translateY(70px);
+    transform: translateY(70px); }

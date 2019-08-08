@@ -1,0 +1,17 @@
+.contacts {
+    form {
+        .form-group,
+        .form-row {
+            transition-property: transform, opacity;
+            transition-duration: 0.8s;
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            &.hidden {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+        }
+    }
+    &__description {
+        margin-bottom: 45px;
+    }
+}

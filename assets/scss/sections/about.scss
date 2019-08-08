@@ -5,6 +5,14 @@
     }
     &__item {
         margin-bottom: 30px;
+        transition-property: transform, opacity;
+        transition-duration: 0.8s;
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        &.hidden {
+            transform: translate(120px, 200px);
+            opacity: 0;
+            &:nth-of-type() {}
+        }
     }
     &__description {
         text-align: start;

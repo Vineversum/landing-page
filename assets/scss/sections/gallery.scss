@@ -7,7 +7,6 @@
     &-item {
         padding: 0 5px 10px 5px;
         position: relative;
-        // z-index: 1;
         
         &__image {
             width: 100%;
@@ -63,6 +62,85 @@
         }
         &:hover .gallery-item__title {
             bottom: 50px;
+        }
+
+        &:first-of-type {
+            transition-property: transform, opacity;
+            transition-duration: 0.8s;
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            &.hidden {
+                transform: translate(-50px, 40px) scale(.5);
+                opacity: 0;
+            }
+        }
+        &:nth-of-type(2) {
+            transition-property: transform, opacity;
+            transition-duration: 0.8s;
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition-delay: 0.3s;
+            &.hidden {
+                transform: translate(-20px, 40px) scale(.5);
+                opacity: 0;
+            }
+        }
+        &:nth-of-type(3) {
+            transition-property: transform, opacity;
+            transition-duration: 0.8s;
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition-delay: 0.5s;
+            &.hidden {
+                transform: translate(20px, 40px) scale(.5);
+                opacity: 0;
+            }
+        }
+        &:nth-of-type(4) {
+            transition-property: transform, opacity;
+            transition-duration: 0.8s;
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition-delay: 0.3s;
+            &.hidden {
+                transform: translate(50px, 40px) scale(.5);
+                opacity: 0;
+            }
+        }
+        &:nth-of-type(5) {
+            transition-property: transform, opacity;
+            transition-duration: 0.8s;
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition-delay: 0.2s;
+            &.hidden {
+                transform: translate(0px, 20px) scale(.5);
+                opacity: 0;
+            }
+        }
+        &:nth-of-type(6) {
+            transition-property: transform, opacity;
+            transition-duration: 0.8s;
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition-delay: 0.5s;
+            &.hidden {
+                transform: translate(30px, 40px) scale(.5);
+                opacity: 0;
+            }
+        }
+        &:nth-of-type(7) {
+            transition-property: transform, opacity;
+            transition-duration: 0.8s;
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition-delay:  0.3s;
+            &.hidden {
+                transform: translate(+50px, 30px) scale(.5);
+                opacity: 0;
+            }
+        }
+        &:nth-of-type(8) {
+            transition-property: transform, opacity;
+            transition-duration: 0.8s;
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            &.hidden {
+                transform: translate(-50px, 40px) scale(.5);
+                opacity: 0;
+            }
         }
     }
 }

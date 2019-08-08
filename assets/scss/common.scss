@@ -7,10 +7,6 @@ html {
 }
 h1, h2, h3, h4, h5 {
     font-family: "Roboto Slab", serif;
-    transition: transform 1s;
-    &.hidden {
-        transform: translateY(70px);
-    }
 }
 p {
     color: rgb(84, 89, 95);
@@ -23,13 +19,22 @@ p {
     &__title {
         text-align: center;
         margin-bottom: 45px;
+        transition-property: transform, opacity;
+        transition-duration: 0.8s;
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        &.hidden {
+            transform: translateY(100px);
+            opacity: 0;
+        }
     }
     &__description {
         text-align: center;
-        margin-bottom: 45px;
-        transition: transform 1s;
+        transition-property: transform, opacity;
+        transition-duration: 0.8s;
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
         &.hidden {
-            transform: translateY(70px);
+            transform: translateY(100px);
+            opacity: 0;
         }
     }
 }

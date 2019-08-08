@@ -1,11 +1,27 @@
 .features {
     background-color: $color-dark;
+    &__description {
+        margin-bottom: 45px;
+    }
     &-item {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 10px;
         margin-bottom: 10px;
+        transition-property: transform, opacity;
+        transition-duration: 0.8s;
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        &.hidden {
+            transform: translateY(120px);
+            opacity: 0;
+            &:first-of-type {
+                transform: translate(-100px, 120px);
+            }
+            &:last-of-type {
+                transform: translate(100px, 120px);
+            }
+        }
         &__icon {
             margin-bottom: 40px;
             > i {
@@ -36,6 +52,7 @@
         }
         &__description {
             text-align: center;
+            
         }
     }
 }

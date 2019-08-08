@@ -2,13 +2,11 @@
     background-color: $color-darkest;
     padding: 0;
     &-item {
-        // display: flex;
-        // justify-content: center;
+        padding-bottom: 15px;
+        transition-property: transform, opacity;
+        transition-duration: 0.8s;
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
         &__icon {
-            // width: 90px;
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
             padding: 0 15px;
             flex-grow: 0;
             // text-align: center;
@@ -21,7 +19,11 @@
             }
         }
         &__caption {
-            // width: calc(100% - 90px);
+           
+        }
+        &.hidden {
+            opacity: 0;
+            transform: translate(100px, 100px);
         }
     }
     &__image {
@@ -31,6 +33,9 @@
     &__content {
         height: 100vh;
         padding: 100px 30px 90px 30px;
+    }
+    &__description {
+        margin-bottom: 45px;
     }
 }
 
