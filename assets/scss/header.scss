@@ -1,3 +1,7 @@
 .header-navbar {
     transition: all 1s;
+    @media(max-width: $middle) {
+        background-color: rgba(1, 1, 1, 0.85) !important;
+        padding: 8px 15px !important;
+    } 
 }

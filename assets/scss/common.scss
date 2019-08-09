@@ -7,6 +7,8 @@ html {
 }
 body {
     overflow-x: hidden;
+    color: black;
+    // width: 100%;
 }
 h1, h2, h3, h4, h5 {
     font-family: "Roboto Slab", serif;
@@ -14,9 +16,14 @@ h1, h2, h3, h4, h5 {
 p {
     color: rgb(84, 89, 95);
 }
-.about, .features, .gallery, .blog, .contacts, .advantages {
+.about, .features, .gallery, .blog, .contacts {
     min-height: 100vh;
+
+}
+.about, .features, .gallery, .blog, .contacts, .advantages {
+    overflow: hidden;
     padding: 105px 0 90px;
+    width: 100%;
     display: flex;
     align-items: center;
     &__title {
@@ -25,7 +32,9 @@ p {
         transition-property: transform, opacity;
         transition-duration: 0.8s;
         transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition-delay: 0.5s;
         &.hidden {
+            transition-delay: 0s;
             transform: translateY(100px);
             opacity: 0;
         }
@@ -35,9 +44,14 @@ p {
         transition-property: transform, opacity;
         transition-duration: 0.8s;
         transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition-delay: 0.5s;
         &.hidden {
+            transition-delay: 0s;
             transform: translateY(100px);
             opacity: 0;
+        }
+        @media (min-width: $small) {
+            margin-bottom: 45px;
         }
     }
     @media (max-width: $middle) and (min-width: $small) {

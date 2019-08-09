@@ -28,7 +28,7 @@ function scrolling() {  //проверяем какие элементы поп�
        $animatedElems.each(function() {
            domElem = $(this).get();
            var $elem = $(this);
-           if (isVisible(domElem[0], 0.75)) {
+           if (isVisible(domElem[0], 0.6)) {
                 setTimeout(function() {
                     $elem.removeClass('hidden');
                 }, 0);
@@ -52,7 +52,7 @@ function inWhichSection(){ //функция проверяет в какой с�
     if (window.pageYOffset < 150) $('.header-navbar').css({'background-color': 'transparent', //меняем внешний вид навбара
                                                             'padding': '15px 16px'}); 
     else $('.header-navbar').css({'background-color': 'rgba(0, 0, 0, 0.8)',
-                                 'padding' : '5px 16px'});
+                                 'padding' : '8px 16px'});
 
     for (let i = 0; i < sectionsDomObj.length; i++) {
         if (window.pageYOffset < 150) {

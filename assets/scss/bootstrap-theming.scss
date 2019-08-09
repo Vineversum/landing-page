@@ -2,6 +2,7 @@
     background-color: $color-light;
     color: $color-accent;
 }
+
 .navbar-dark .navbar-nav .nav-link {
     text-align: center;
     text-decoration: none;
@@ -31,6 +32,15 @@
             background-color: #ee3b24;
             transform: translateY(-5px);
         }
+    }
+}
+.navbar-dark .navbar-toggler {
+    border-color: $color-light;
+}
+.navbar-expand-lg>.container, .navbar-expand-lg>.container-fluid {
+    @media (max-width: $middle) and (min-width: $xsmall) {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 

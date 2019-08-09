@@ -18,10 +18,15 @@
             img {
                 transition: transform 0.5s;
                 width: 100%;
+                @media (max-width: $small) {
+                    margin-top: -20%;
+                    margin-bottom: -25%;
+                }
             }
         }
         &__description {
             font-size: 0.9rem;
+            color: #545454;
         }
         &__post {
             background-color: $color-light;
@@ -32,6 +37,8 @@
         }
         &__date {
             margin: 15px 0;
+            color: #545454;
+            font-size: 0.9rem;
         }
         &:hover {
             .blog-item__image img {
@@ -40,7 +47,13 @@
             .blog-item__post {
                 background-color: $color-accent;
                 color: $color-light;
-                transition: background-color 1s ease;
+                // transition: background-color 1s ease;
+            }
+            .blog-item__date {
+                color: $color-light;
+            }
+            .blog-item__description {
+                color: $color-light;
             }
         }
         

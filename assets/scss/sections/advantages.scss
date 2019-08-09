@@ -6,6 +6,17 @@
         transition-property: transform, opacity;
         transition-duration: 0.8s;
         transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition-delay: 0.5s;
+        &:nth-of-type(2) {
+            transition-delay: 0.6s;
+        }
+        &:nth-of-type(3) {
+            transition-delay: 0.7s;
+        }
+        &:nth-of-type(4) {
+            transition-delay: 0.8s;
+        }
+
         &__icon {
             padding: 0 15px;
             flex-grow: 0;
@@ -15,12 +26,15 @@
                 width: 60px;
                 margin-top: 10px;
                 text-align: center;
+                @media (max-width: $xsmall) {
+                    font-size: 2rem;
+                    width: 30px;
+                }
             }
         }
-        &__caption {
-           
-        }
+       
         &.hidden {
+            transition-delay: 0s;
             opacity: 0;
             transform: translate(100px, 100px);
         }
@@ -30,10 +44,13 @@
         background-size: cover;
     }
     &__content {
-        height: 100vh;
+        
         padding: 105px 30px 90px 30px;
         display: flex;
         align-items: center;
+        @media (min-width: $middle) {
+            min-height: 100vh;
+        }
         @media (max-width: $middle) and (min-width: $small) {
             padding-top: 105px;
             padding-bottom: 75px;
@@ -53,8 +70,14 @@
 }
 
 
-@media (max-width: 991.8px) and (min-width: 768px) {
+@media (max-width: $middle) and (min-width: $small) {
     .advantages .container-fluid {
         max-width: 720px;
+    }
+}
+
+@media (max-width: $small) and (min-width: $xsmall){
+    .advantages .container-fluid {
+        max-width: 540px;
     }
 }
